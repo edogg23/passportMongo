@@ -18,10 +18,11 @@ mongoose.connect('mongodb://localhost/node-auth')
 var index = require('./routes/index');
 var users = require('./routes/users');
 
-var User = require('./models/user');
-	passport.use(new LocalStrategy(User.authenticate()));
-	passport.serializeUser(User.serializeUser());
-	passport.deserializeUser(User.deserializeUser());
+// Moved this to passport.js
+// var User = require('./models/user');
+// 	passport.use(new LocalStrategy(User.authenticate()));
+// 	passport.serializeUser(User.serializeUser());
+// 	passport.deserializeUser(User.deserializeUser());
 
 var app = express();
 

@@ -1,12 +1,14 @@
 var mongoose = require("mongoose");
 var passport = require("passport");
 var User = require("../models/User");
+console.log('authcontroller.js');
 
 var userController = {};
 
 // Restrict access to root page
 userController.home = function(req, res) {
   res.render('index', { user : req.user });
+  console.log('authcontroller.js: home');
 };
 
 // Go to registration page
